@@ -17,13 +17,14 @@ public class MomentumViewer
     {
         // create and configure the frame (window) for the program
         JFrame frame = new JFrame();
-        
-        frame.setSize(1000 /* x */, 500 /* y */);
+        int width = 1000;
+        int height = 500;
+        frame.setSize(width /* x */, height /* y */);
         frame.setTitle("Momentum");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
         // a frame contains a single component; create the Cityscape component and add it to the frame
-        MomentumComponent panel = new MomentumComponent();
+        MomentumComponent panel = new MomentumComponent(width,height);
         frame.add(panel);
        
         

@@ -1,40 +1,28 @@
-
-
-/**
- * Write a description of class Ball here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
+import java.awt.geom.Ellipse2D;
+import java.awt.Color;
+import java.awt.Graphics2D;
 public class Ball
 {
-    /** description of instance variable x (add comment for each instance variable) */
+    private int width;
+    private int height;
     private int x;
-
-    /**
-     * Default constructor for objects of class Ball
-     */
-    public Ball()
+    private int y;
+    private Color color;
+    private Arrow velocity;
+    private Arrow momentum;
+    public Ball(int x, int y, int w, int h, Color c)
     {
-        // initialise instance variables
-        x = 0;
+        this.x = x;
+        this.y = y;
+        this.width = w;
+        this.height = h;
+        this.color = c;
     }
-
-    /**
-     * An example of a method - replace this comment with your own
-     *    that describes the operation of the method
-     *
-     * @pre        preconditions for the method
-     *            (what the method assumes about the method's parameters and class's state)
-     * @post    postconditions for the method
-     *            (what the method guarantees upon completion)
-     * @param    y    description of parameter y
-     * @return    description of the return value
-     */
-    public int sampleMethod(int y)
+    public void draw(Graphics2D g2)
     {
-        // put your code here
-        return x+y;
+        Ellipse2D.Double ball = new Ellipse2D.Double(x,y,width,height);
+        g2.setColor(color);
+        g2.draw(ball);
+        g2.fill(ball);
     }
-
 }
