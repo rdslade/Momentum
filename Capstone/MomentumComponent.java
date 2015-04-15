@@ -45,6 +45,10 @@ public class MomentumComponent extends JPanel
         this.add(start);
         this.add(howMany);
     }
+    public void createArrow(int x, int y)
+    {
+        Arrow arrow = new Arrow();
+    }
     class MyMouseListener implements MouseListener
     {
         public void mouseClicked(MouseEvent event)
@@ -65,7 +69,19 @@ public class MomentumComponent extends JPanel
             }
         }
         public void mouseReleased(MouseEvent event){}
-        public void mousePressed(MouseEvent event){}
+        public void mousePressed(MouseEvent event)
+        {
+            if (ballsLeft==0 && (ball1.getX()-25 < event.getX()&& event.getX() < ball1.getX()+25) &&
+                 (ball1.getY()-15 <event.getY() && event.getY()< ball1.getY()+15))
+            {
+                createArrow(event.getX(),event.getY());
+            }
+            else if (ballsLeft==0 && (ball2.getX()-25 < event.getX()&& event.getX() < ball2.getX()+25) &&
+                 (ball2.getY()-25 <event.getY() && event.getY()< ball2.getY()+25))
+            {
+                createArrow(event.getX(),event.getY());
+            }
+        }
         public void mouseEntered(MouseEvent event){}
         public void mouseExited(MouseEvent event){}
     }
