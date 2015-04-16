@@ -1,6 +1,7 @@
 import java.awt.geom.Ellipse2D;
 import java.awt.Color;
 import java.awt.Graphics2D;
+import java.awt.Dimension;
 public class Ball
 {
     private int width;
@@ -17,6 +18,7 @@ public class Ball
         this.width = w;
         this.height = h;
         this.color = c;
+        this.velocity = new Arrow(new Dimension(width,height),x,y+height/2);
     }
     public void draw(Graphics2D g2)
     {
@@ -40,5 +42,9 @@ public class Ball
     public int getHeight()
     {
         return this.height;
+    }
+    public Arrow getVelocityArrow()
+    {
+        return this.velocity;
     }
 }

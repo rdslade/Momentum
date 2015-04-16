@@ -29,6 +29,7 @@ public class MomentumComponent extends JPanel
         if (ballsLeft==1)
         {
             ball1.draw(g2);
+            ball1.getVelocityArrow().draw(g2);
         }
         if (ballsLeft==0)
         {
@@ -39,15 +40,11 @@ public class MomentumComponent extends JPanel
     {
         int bold = Font.BOLD;
         start = new JLabel("Click on the screen to add the Momentum Balls");
-        howMany = new JLabel("You have "+ballsLeft+" balls left to insert on the screen");
         start.setFont(new Font("JasmineUPC", bold, 26));
+        howMany = new JLabel("You have "+ballsLeft+" balls left to insert on the screen");
         howMany.setFont(new Font("JasmineUPC",bold,18));
         this.add(start);
         this.add(howMany);
-    }
-    public void createArrow(int x, int y)
-    {
-        Arrow arrow = new Arrow();
     }
     class MyMouseListener implements MouseListener
     {
@@ -57,7 +54,7 @@ public class MomentumComponent extends JPanel
             {
                 ball1 = new Ball(event.getX(),event.getY(),15,15,Color.RED);
                 ballsLeft--;
-                howMany = new JLabel("You have "+ballsLeft+" balls left to insert on the screen");
+                howMany.setText("You have "+ballsLeft+" balls left to insert on the screen");
                 repaint();
             }
             else if (ballsLeft == 1)
@@ -74,12 +71,12 @@ public class MomentumComponent extends JPanel
             if (ballsLeft==0 && (ball1.getX()-25 < event.getX()&& event.getX() < ball1.getX()+25) &&
                  (ball1.getY()-15 <event.getY() && event.getY()< ball1.getY()+15))
             {
-                createArrow(event.getX(),event.getY());
+                
             }
             else if (ballsLeft==0 && (ball2.getX()-25 < event.getX()&& event.getX() < ball2.getX()+25) &&
                  (ball2.getY()-25 <event.getY() && event.getY()< ball2.getY()+25))
             {
-                createArrow(event.getX(),event.getY());
+                
             }
         }
         public void mouseEntered(MouseEvent event){}
