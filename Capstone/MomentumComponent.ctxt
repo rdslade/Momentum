@@ -5,4 +5,6 @@ comment1.params=g
 comment1.target=void\ paintComponent(java.awt.Graphics)
 comment2.params=
 comment2.target=void\ start()
-numComments=3
+comment3.params=ball
+comment3.target=Ball\ ballSelected(java.lang.String)
+numComments=4
