@@ -21,7 +21,6 @@ public class Ball
         this.height = h;
         this.color = c;
         this.velocity = new Arrow(100,x,y);
-        info = new InfoBox();
     }
     public void draw(Graphics2D g2)
     {
