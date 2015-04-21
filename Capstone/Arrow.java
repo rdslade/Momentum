@@ -7,6 +7,7 @@ public class Arrow
     public int height;
     public int x;
     public int y;
+    public double angle;
     public static final int WIDTH = 50;
     public Arrow(int h, int x, int y)
     {
@@ -30,5 +31,10 @@ public class Arrow
     public int getY()
     {
         return this.y;
+    }
+    public void moveArrow(int x, int y)
+    {
+        this.x = x;
+        this.y = y;
     }
 }

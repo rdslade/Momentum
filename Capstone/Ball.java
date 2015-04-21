@@ -12,6 +12,7 @@ public class Ball
     private Color color;
     private Arrow velocity;
     private Arrow momentum;
+    private InfoBox info;
     public Ball(int x, int y, int w, int h, Color c)
     {
         this.x = x;
@@ -20,6 +21,7 @@ public class Ball
         this.height = h;
         this.color = c;
         this.velocity = new Arrow(100,x,y);
+        info = new InfoBox();
     }
     public void draw(Graphics2D g2)
     {
@@ -36,6 +38,7 @@ public class Ball
     {
         this.x = x;
         this.y = y;
+        velocity.moveArrow(x,y);
     }
     public int getY()
     {

@@ -1,5 +1,5 @@
 import javax.swing.JFrame;
-import javax.swing.JOptionPane;
+import javax.swing.*;
 
 /**
  * Class that contains the main method for the program and creates the frame containing the component
@@ -26,8 +26,6 @@ public class MomentumViewer
         // a frame contains a single component; create the Cityscape component and add it to the frame
         MomentumComponent panel = new MomentumComponent(width,height);
         frame.add(panel);
-       
-        
         // make the frame visible which will result in the paintComponent method being invoked on the
         //  component.
         frame.setVisible(true);

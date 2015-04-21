@@ -90,11 +90,6 @@ public class MomentumComponent extends JPanel
     {
         public void mouseDragged(MouseEvent e)
         {
-//             int dx = e.getX() - mousePt.x;
-//             int dy = e.getY() - mousePt.y;
-//             origin.setLocation(origin.x + dx, origin.y + dy);
-//             mousePt = e.getPoint();
-//             repaint();
                int dx = e.getX() - ball1.getX();
                int dy = e.getY() - ball1.getY();
                if ((ball1.getX() < e.getX()+50&& e.getX()+50 < ball1.getX()+100) &&
