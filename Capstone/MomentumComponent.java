@@ -7,9 +7,11 @@ import java.awt.event.MouseMotionListener;
 import java.awt.event.MouseEvent;
 import java.awt.Font;
 import java.awt.Color;
+import javax.swing.JFrame;
 public class MomentumComponent extends JPanel
 {
     private int ballsLeft;
+    private JFrame master;
     private JLabel start;
     private JLabel howMany;
     private Ball ball1;
@@ -17,7 +19,7 @@ public class MomentumComponent extends JPanel
     private Ball selectedBall;
     private int screenWidth;
     private int screenHeight;
-    public MomentumComponent(int w, int h)
+    public MomentumComponent(int w, int h, JFrame f)
     {
         ballsLeft = 2;
         screenWidth = w;
@@ -33,6 +35,7 @@ public class MomentumComponent extends JPanel
         {
             ball1.draw(g2);
             ball1.getVelocityArrow().draw(g2);
+            ball1.getInfo().display(this.master);
         }
         if (ball2!=null)
         {
@@ -68,14 +71,14 @@ public class MomentumComponent extends JPanel
         {
             if (ballsLeft == 2)
             {
-                ball1 = new Ball(e.getX(),e.getY(),50,50,Color.RED);
+                ball1 = new Ball(e.getX(),e.getY(),50,50,Color.RED, "Ball 1");
                 ballsLeft--;
                 howMany.setText("You have "+ballsLeft+" balls left to insert on the screen");
                 repaint();
             }
             else if (ballsLeft == 1)
             {
-                ball2 = new Ball(e.getX(),e.getY(),50,50,Color.BLUE);
+                ball2 = new Ball(e.getX(),e.getY(),50,50,Color.BLUE, "Ball 2");
                 ballsLeft--;
                 howMany.setText("You have "+ballsLeft+" balls left to insert on the screen");
                 repaint();

@@ -25,20 +25,19 @@ public class MomentumViewer
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLocationRelativeTo(null);
         // a frame contains a single component; create the Cityscape component and add it to the frame
-        MomentumComponent panel = new MomentumComponent(width,height);
+        MomentumComponent panel = new MomentumComponent(width,height,frame);
         frame.add(panel);
-        
-        JDialog dialog = new JDialog(frame);
-        dialog.setTitle("Dialog created without extending JDialog class.");
-        dialog.setSize(new Dimension(400, 100));
-        dialog.setLocationRelativeTo(frame);
-        dialog.setModal(true);
-        dialog.setVisible(true);
-        dialog.setLocationRelativeTo(frame);
-        dialog.setLocation(new Point(200,200));
-        // make the frame visible which will result in the paintComponent method being invoked on the
-        //  component.
         frame.setVisible(true);
+//         JDialog dialog = new JDialog(frame);
+//         dialog.setTitle("Dialog created without extending JDialog class.");
+//         dialog.setSize(new Dimension(400, 100));
+//         dialog.setModal(true);
+//         dialog.setVisible(true);
+//         dialog.setAlwaysOnTop(true);
+//         dialog.setLocationRelativeTo(frame);
+//         dialog.setLocation(new Point(200,200));
+        
+    
 
     }
 

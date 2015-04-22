@@ -5,6 +5,7 @@ import java.awt.Graphics2D;
 import java.awt.Dimension;
 public class Ball
 {
+    private String name;
     private int width;
     private int height;
     private int x;
@@ -13,7 +14,7 @@ public class Ball
     private Arrow velocity;
     private Arrow momentum;
     private InfoBox info;
-    public Ball(int x, int y, int w, int h, Color c)
+    public Ball(int x, int y, int w, int h, Color c, String n)
     {
         this.x = x;
         this.y = y;
@@ -21,6 +22,7 @@ public class Ball
         this.height = h;
         this.color = c;
         this.velocity = new Arrow(100,x,y);
+        this.info = new InfoBox(n);
     }
     public void draw(Graphics2D g2)
     {
@@ -54,5 +56,9 @@ public class Ball
     public Arrow getVelocityArrow()
     {
         return this.velocity;
+    }
+    public InfoBox getInfo()
+    {
+        return this.info;
     }
 }

@@ -1,6 +1,6 @@
 #BlueJ class context
-comment0.params=w\ h
-comment0.target=MomentumComponent(int,\ int)
+comment0.params=w\ h\ f
+comment0.target=MomentumComponent(int,\ int,\ javax.swing.JFrame)
 comment1.params=g
 comment1.target=void\ paintComponent(java.awt.Graphics)
 comment2.params=
