@@ -36,6 +36,7 @@ public class MomentumComponent extends JPanel
         {
             ball1.draw(g2);
             ball1.getVelocityArrow().draw(g2);
+            ball1.getInfo().draw(master);
         }
         if (ball2!=null)
         {

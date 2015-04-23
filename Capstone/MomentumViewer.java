@@ -30,15 +30,9 @@ public class MomentumViewer
         frame.add(panel);
         frame.setVisible(true);
         
-//         JDialog dialog = new JDialog();
-//         dialog.setTitle("Dialog created without extending JDialog class.");
-//         dialog.setSize(new Dimension(400, 100));
-//         dialog.setModal(true);
-//         dialog.setLocationRelativeTo(frame);
-//         dialog.setVisible(true);
-//         dialog.setAlwaysOnTop(true);
         
-    
+        
+        
 
     }
 
