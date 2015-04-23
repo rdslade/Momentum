@@ -26,6 +26,7 @@ public class MomentumComponent extends JPanel
         screenHeight = h;
         this.addMouseListener(new MyMouseListener());
         this.addMouseMotionListener(new MyMouseMoverListenter());
+        this.master = f;
         start();
     }
     public void paintComponent(Graphics g)
@@ -35,7 +36,6 @@ public class MomentumComponent extends JPanel
         {
             ball1.draw(g2);
             ball1.getVelocityArrow().draw(g2);
-            ball1.getInfo().display(this.master);
         }
         if (ball2!=null)
         {
@@ -71,14 +71,14 @@ public class MomentumComponent extends JPanel
         {
             if (ballsLeft == 2)
             {
-                ball1 = new Ball(e.getX(),e.getY(),50,50,Color.RED, "Ball 1");
+                ball1 = new Ball(e.getX(),e.getY(),50,50,Color.RED, "Ball 1",master);
                 ballsLeft--;
                 howMany.setText("You have "+ballsLeft+" balls left to insert on the screen");
                 repaint();
             }
             else if (ballsLeft == 1)
             {
-                ball2 = new Ball(e.getX(),e.getY(),50,50,Color.BLUE, "Ball 2");
+                ball2 = new Ball(e.getX(),e.getY(),50,50,Color.BLUE, "Ball 2",master);
                 ballsLeft--;
                 howMany.setText("You have "+ballsLeft+" balls left to insert on the screen");
                 repaint();

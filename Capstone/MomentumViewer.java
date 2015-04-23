@@ -2,6 +2,7 @@ import javax.swing.JFrame;
 import javax.swing.*;
 import java.awt.Point;
 import java.awt.Dimension;
+import java.awt.GridLayout;
 /**
  * Class that contains the main method for the program and creates the frame containing the component
  * 
@@ -28,14 +29,14 @@ public class MomentumViewer
         MomentumComponent panel = new MomentumComponent(width,height,frame);
         frame.add(panel);
         frame.setVisible(true);
-//         JDialog dialog = new JDialog(frame);
+        
+//         JDialog dialog = new JDialog();
 //         dialog.setTitle("Dialog created without extending JDialog class.");
 //         dialog.setSize(new Dimension(400, 100));
 //         dialog.setModal(true);
+//         dialog.setLocationRelativeTo(frame);
 //         dialog.setVisible(true);
 //         dialog.setAlwaysOnTop(true);
-//         dialog.setLocationRelativeTo(frame);
-//         dialog.setLocation(new Point(200,200));
         
     
 

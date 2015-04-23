@@ -1,5 +1,6 @@
 import javax.swing.*;
 import java.awt.Point;
+import java.awt.Dimension;
 public class InfoBox extends JDialog
 {
     private JLabel velLabel;
@@ -8,7 +9,7 @@ public class InfoBox extends JDialog
     private JTextField angleField;
     private JButton submit;
     private JFrame frame;
-    public InfoBox(String n)
+    public InfoBox(String n, JFrame m)
     {
         velLabel = new JLabel("Velocity (m/s):");
         velField = new JTextField(5);
@@ -22,9 +23,13 @@ public class InfoBox extends JDialog
         this.add(angleLabel);
         this.add(angleField);
         this.add(submit);
-    }
-    public void display(JFrame m)
-    {
-        m.add(this);
+
+        JDialog dialog = new JDialog();
+        this.setTitle(n);
+        this.setSize(new Dimension(50, 0));
+        this.setModal(true);
+        this.setLocationRelativeTo(m);
+        this.setVisible(true);
+        this.setAlwaysOnTop(true);
     }
 }

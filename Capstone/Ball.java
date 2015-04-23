@@ -3,9 +3,11 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Dimension;
+import javax.swing.JFrame;
 public class Ball
 {
     private String name;
+    private JFrame frame;
     private int width;
     private int height;
     private int x;
@@ -14,7 +16,7 @@ public class Ball
     private Arrow velocity;
     private Arrow momentum;
     private InfoBox info;
-    public Ball(int x, int y, int w, int h, Color c, String n)
+    public Ball(int x, int y, int w, int h, Color c, String n, JFrame j)
     {
         this.x = x;
         this.y = y;
@@ -22,7 +24,7 @@ public class Ball
         this.height = h;
         this.color = c;
         this.velocity = new Arrow(100,x,y);
-        this.info = new InfoBox(n);
+        this.info = new InfoBox(n,j);
     }
     public void draw(Graphics2D g2)
     {
