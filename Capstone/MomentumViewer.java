@@ -29,11 +29,6 @@ public class MomentumViewer
         MomentumComponent panel = new MomentumComponent(width,height,frame);
         frame.add(panel);
         frame.setVisible(true);
-        
-        
-        
-        
-
     }
 
 }

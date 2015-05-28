@@ -7,4 +7,6 @@ comment2.params=
 comment2.target=void\ start()
 comment3.params=ball
 comment3.target=Ball\ ballSelected(java.lang.String)
-numComments=4
+comment4.params=
+comment4.target=void\ reset()
+numComments=5

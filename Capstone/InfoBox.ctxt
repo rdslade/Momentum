@@ -1,6 +1,0 @@
-#BlueJ class context
-comment0.params=n\ m
-comment0.target=InfoBox(java.lang.String,\ javax.swing.JFrame)
-comment1.params=f
-comment1.target=void\ draw(javax.swing.JFrame)
-numComments=2

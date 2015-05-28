@@ -2,11 +2,14 @@ import java.awt.Rectangle;
 import java.awt.geom.Rectangle2D;
 import java.awt.Dimension;
 import java.awt.Graphics2D;
+import java.awt.geom.AffineTransform;
+import java.awt.Shape;
 public class Arrow
 {
+    public Rectangle2D.Double theBody;
     public int height;
-    public int x;
-    public int y;
+    public double x;
+    public double y;
     public double angle;
     public static final int WIDTH = 50;
     public Arrow(int h, int x, int y)
@@ -15,24 +18,24 @@ public class Arrow
         this.x = x;
         this.y = y;
     }
-    public void draw(Graphics2D g2)
+    public void draw(Graphics2D g2,int a)
     {
-        Rectangle2D.Double theBody = new Rectangle2D.Double(x,y,WIDTH,height);
+        theBody = new Rectangle2D.Double(x,y,WIDTH,height);
         g2.draw(theBody);
     }
     public int getHeight()
     {
         return this.height;
     }
-    public int getX()
+    public double getX()
     {
         return this.x;
     }
-    public int getY()
+    public double getY()
     {
         return this.y;
     }
-    public void moveArrow(int x, int y)
+    public void moveArrow(double x, double y)
     {
         this.x = x;
         this.y = y;
